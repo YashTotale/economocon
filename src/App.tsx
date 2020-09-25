@@ -2,6 +2,7 @@
 import React from "react";
 import { hot } from "react-hot-loader";
 import Home from "./Pages/Home";
+import NavBar from "./Components/NavBar";
 
 //Material UI Imports
 import Theme from "./Theme";
@@ -22,6 +23,7 @@ const App: React.FC = (props) => {
 const Routes: React.FC = (props) => {
   return (
     <Router>
+      <NavBar />
       <Switch>
         <Route path="/">
           <Home />
