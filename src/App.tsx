@@ -23,7 +23,7 @@ const App: React.FC = (props) => {
 const Routes: React.FC = (props) => {
   return (
     <Router>
-      <NavBar />
+      {/* <NavBar /> */}
       <Switch>
         <Route path="/">
           <Home />

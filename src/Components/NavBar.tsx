@@ -7,6 +7,8 @@ import { AppBar, makeStyles, Toolbar, Typography } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   navbar: {
     justifyContent: "center",
+    backgroundImage:
+      "linear-gradient(135deg, rgb(68, 148, 252) 0%, rgb(15, 107, 245) 100%)",
   },
   heading: {
     textAlign: "center",
@@ -16,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 const NavBar: React.FC = () => {
   const classes = useStyles();
   return (
-    <AppBar color="transparent" elevation={2} position="static">
+    <AppBar elevation={2} position="static">
       <Toolbar className={classes.navbar}>
         <Typography className={classes.heading} variant="h4">
           SDG Project
