@@ -1,45 +1,40 @@
 //React Imports
 import React from "react";
-import Select from "react-select";
 import Jumbotron from "../Components/Jumbotron";
 
 //Material UI Imports
-import { makeStyles, Theme, Paper, Typography } from "@material-ui/core";
+import { makeStyles, Theme } from "@material-ui/core/styles";
+import Welcome from "../Components/Welcome";
 
 const useStyles = makeStyles((theme: Theme) => ({
   home: {
     display: "flex",
-    flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
   },
-  configure: {
+  info: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    width: "100%",
-    margin: "40px",
-    padding: "10px",
+    width: "50%",
+    margin: "auto",
   },
-  select: {
-    width: "70%",
-  },
+  links: {},
 }));
 
 const HomePage: React.FC = () => {
   const classes = useStyles();
   return (
-    <div className={classes.home}>
-      <Jumbotron></Jumbotron>
-      <Paper className={classes.configure}>
-        <Typography variant="h4">Configure</Typography>
-        <Select
-          className={classes.select}
-          options={[{ value: "hello", label: "hello" }]}
-        ></Select>
-      </Paper>
-    </div>
+    <>
+      <Jumbotron />
+      <div className={classes.home}>
+        <div className={classes.info}>
+          <div className={classes.links}></div>
+          <Welcome />
+        </div>
+      </div>
+    </>
   );
 };
 

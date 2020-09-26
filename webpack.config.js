@@ -35,7 +35,7 @@ module.exports = {
     historyApiFallback: true,
     contentBase: path.join(__dirname, "public/"),
     //Change the port here if you need to
-    port: 3000,
+    port: 3300,
     publicPath: "http://localhost:3000/dist/",
     hotOnly: true,
   },

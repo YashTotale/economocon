@@ -6,6 +6,9 @@ import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
 
 const Theme: React.FC = ({ children }) => {
   const theme = createMuiTheme({
+    typography: {
+      fontFamily: "Serif",
+    },
     palette: {},
   });
 
