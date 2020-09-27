@@ -1,5 +1,5 @@
 import React from "react";
-import Text from "../Components/Reusable/Text";
+import Text from "../Reusable/Text";
 
 //Material UI Imports
 import { makeStyles, Typography } from "@material-ui/core";

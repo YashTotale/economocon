@@ -1,9 +1,9 @@
 //React Imports
 import React from "react";
 import Jumbotron from "../Components/Jumbotron";
-import Welcome from "../Components/Welcome";
-import Problems from "../Components/Problems";
-import Solutions from "../Components/Solutions";
+import Welcome from "../Components/Sections/Welcome";
+import Problems from "../Components/Sections/Problems";
+import Solutions from "../Components/Sections/Solutions";
 
 //Material UI Imports
 import { makeStyles, Theme } from "@material-ui/core/styles";
@@ -16,7 +16,7 @@ const useStyles = makeStyles((theme: Theme) => ({
     justifyContent: "center",
     alignItems: "center",
     width: "50%",
-    margin: "10px auto 0px",
+    margin: "20px auto 0px",
   },
 }));
 

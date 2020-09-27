@@ -1,6 +1,6 @@
 // React Imports
 import React from "react";
-import Text from "./Reusable/Text";
+import Text from "../Reusable/Text";
 
 // Material UI Imports
 import { makeStyles } from "@material-ui/core/styles";
