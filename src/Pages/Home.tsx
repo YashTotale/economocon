@@ -1,26 +1,23 @@
 //React Imports
 import React from "react";
 import Jumbotron from "../Components/Jumbotron";
+import Welcome from "../Components/Welcome";
+import Problems from "../Components/Problems";
+import Solutions from "../Components/Solutions";
 
 //Material UI Imports
 import { makeStyles, Theme } from "@material-ui/core/styles";
-import Welcome from "../Components/Welcome";
+import { Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme: Theme) => ({
   home: {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-  },
-  info: {
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     width: "50%",
-    margin: "auto",
+    margin: "10px auto 0px",
   },
-  links: {},
 }));
 
 const HomePage: React.FC = () => {
@@ -29,10 +26,9 @@ const HomePage: React.FC = () => {
     <>
       <Jumbotron />
       <div className={classes.home}>
-        <div className={classes.info}>
-          <div className={classes.links}></div>
-          <Welcome />
-        </div>
+        <Welcome />
+        <Problems />
+        <Solutions />
       </div>
     </>
   );

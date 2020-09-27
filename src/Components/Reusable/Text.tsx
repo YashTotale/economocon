@@ -4,14 +4,16 @@ import React from "react";
 import { makeStyles, Typography } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
-  text: {},
+  text: {
+    margin: "10px 2px",
+  },
 }));
 
 const Text: React.FC = ({ children }) => {
   const classes = useStyles();
 
   return (
-    <Typography variant="body1" className={classes.text}>
+    <Typography variant="h6" className={classes.text}>
       {children}
     </Typography>
   );

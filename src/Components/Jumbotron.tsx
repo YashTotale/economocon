@@ -2,6 +2,7 @@ import React from "react";
 
 //Material UI Imports
 import { makeStyles, Typography } from "@material-ui/core";
+import ModifiedA from "./Reusable/ModifiedA";
 
 const useStyles = makeStyles((theme) => ({
   jumbotron: {
@@ -13,10 +14,12 @@ const useStyles = makeStyles((theme) => ({
       "linear-gradient(135deg, rgb(38, 132, 255) 0%, rgb(7, 71, 166) 100%)",
   },
   content: {
-    width: "50%",
-    padding: "20px",
     display: "flex",
+    flexGrow: 1,
     flexDirection: "column",
+    alignItems: "center",
+    width: "50%",
+    padding: "20px 0px",
   },
   heading: {
     color: "white",
@@ -29,12 +32,23 @@ const useStyles = makeStyles((theme) => ({
     color: "white",
     fontFamily: "American Typewriter, serif",
   },
+  goalImg: {
+    width: 150,
+    height: 150,
+    margin: "0px 70px",
+  },
 }));
 
 const Jumbotron: React.FC = () => {
   const classes = useStyles();
   return (
     <div className={classes.jumbotron}>
+      <ModifiedA href="https://www.un.org/sustainabledevelopment/economic-growth/">
+        <img
+          className={classes.goalImg}
+          src="https://i.ibb.co/r42L7Xw/image.png"
+        ></img>
+      </ModifiedA>
       <div className={classes.content}>
         <Typography className={classes.heading} variant="h1">
           Econonomocon
@@ -43,6 +57,12 @@ const Jumbotron: React.FC = () => {
           Here to help fledgling industries boom in a safe and sustainable way!
         </Typography>
       </div>
+      <ModifiedA href="https://www.un.org/sustainabledevelopment/infrastructure-industrialization/">
+        <img
+          className={classes.goalImg}
+          src="https://i.ibb.co/FznJ6S6/E-SDG-goals-icons-individual-rgb-09.png"
+        ></img>
+      </ModifiedA>
     </div>
   );
 };
