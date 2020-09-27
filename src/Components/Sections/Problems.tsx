@@ -1,11 +1,11 @@
 // React Imports
 import React from "react";
 import Text from "../Reusable/Text";
+import Heading from "../Reusable/Heading";
 
 // Material UI Imports
 import { makeStyles } from "@material-ui/core/styles";
 import {
-  Typography,
   List,
   ListItem,
   ListItemText,
@@ -27,9 +27,7 @@ const Problems: React.FC<ProblemsProps> = ({}) => {
 
   return (
     <div>
-      <Typography className={classes.heading} variant="h4">
-        Problems
-      </Typography>
+      <Heading>Problems</Heading>
       <Text>
         Today, the world faces many problems when it comes to sustainable
         economic growth and development, especially due to{" "}
