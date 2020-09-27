@@ -42,8 +42,8 @@ const Problems: React.FC<ProblemsProps> = ({}) => {
             <strong>decline or stagnate</strong> in 2020
           </Item>
           <Item avatar="https://i.ibb.co/yWsSG1R/image.png">
-            Males earn <strong>12.5%</strong> more than women in 89% of
-            countries with data
+            Women earn <strong>12.5% less</strong> than men in 89% of countries
+            with data
           </Item>
         </List>
       </Text>
