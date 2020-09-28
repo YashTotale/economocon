@@ -9,11 +9,15 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const Text: React.FC = ({ children }) => {
+interface TextProps {
+  className?: string;
+}
+
+const Text: React.FC<TextProps> = ({ children, className }) => {
   const classes = useStyles();
 
   return (
-    <Typography variant="h6" className={classes.text}>
+    <Typography variant="h6" className={`${classes.text} ${className}`}>
       {children}
     </Typography>
   );

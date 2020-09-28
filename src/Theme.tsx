@@ -2,7 +2,8 @@
 import React from "react";
 
 //Material UI Imports
-import { createMuiTheme, ThemeProvider } from "@material-ui/core/styles";
+import { createMuiTheme, ThemeProvider } from "@material-ui/core";
+import { amber, lightBlue } from "@material-ui/core/colors";
 
 const Theme: React.FC = ({ children }) => {
   const theme = createMuiTheme({
@@ -16,7 +17,14 @@ const Theme: React.FC = ({ children }) => {
     typography: {
       fontFamily: "Roboto, Serif",
     },
-    palette: {},
+    palette: {
+      primary: {
+        main: lightBlue["500"]
+      },
+      secondary: {
+        main: amber["500"]
+      }
+    },
   });
 
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;

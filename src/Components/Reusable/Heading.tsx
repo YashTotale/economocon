@@ -12,12 +12,14 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface HeadingProps {}
+interface HeadingProps {
+  className?: string;
+}
 
-const Heading: React.FC<HeadingProps> = ({ children }) => {
+const Heading: React.FC<HeadingProps> = ({ children, className }) => {
   const classes = useStyles();
   return (
-    <Typography className={classes.heading} variant="h4">
+    <Typography className={`${classes.heading} ${className}`} variant="h4">
       {children}
     </Typography>
   );
