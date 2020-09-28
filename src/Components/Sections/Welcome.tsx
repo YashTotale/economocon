@@ -5,13 +5,8 @@ import Item from "../Reusable/Item";
 import Sidekick from "../Sidekick";
 
 //Material UI Imports
-import { makeStyles, List, Typography } from "@material-ui/core";
+import { makeStyles } from "@material-ui/core";
 import {} from "@material-ui/icons";
-
-interface StyleProps {
-  hoveringImage1: boolean;
-  hoveringImage2: boolean;
-}
 
 const useStyles = makeStyles((theme) => ({
   welcome: {
@@ -38,16 +33,17 @@ const Welcome: React.FC = () => {
       <Heading>Welcome</Heading>
       <Text>
         Hi, I'm <strong>Economocon</strong>. I'm not your regular superhero,
-        instead, I'm a website designed to send help to places that are trying
-        to innovate and industrialize.
+        instead, I'm a website designed to send help to places in an effort to
+        boost their economies and help them innovate and industrialize.
       </Text>
       <Text>
-        My sidekicks, Fund Friend and ... help me achieve these goals.
+        My sidekicks, <strong>Fund Friend</strong> and <strong>Unleash</strong>,
+        help me achieve these goals.
       </Text>
       <div className={classes.heroes}>
         <Sidekick
           name="Fund Friend"
-          image="https://lh3.googleusercontent.com/-4xCdCPn5T04/X3Ec-AJNN9I/AAAAAAAAAHY/7wkPnUPqfBQeIr6IYfINZhKv58j1AVJtgCK8BGAsYHg/s0/2020-09-27.png"
+          image="https://i.ibb.co/4JdbhFp/image.png"
           description={
             <>
               Fund Friend helps further the progress on{" "}
@@ -57,33 +53,58 @@ const Welcome: React.FC = () => {
           }
           superpowers={[
             {
-              name:
-                "Enchanting effect of his shining green and gold suit on workers.",
+              name: "Enchanting effect on workers",
               description:
-                "Workers are motivated to work faster and more efficiently as Fund Friend's suit symbolizes the prosperity and wealth they can attain through hard work.",
+                "Workers are motivated to work faster and more efficiently as Fund Friend's shining green and gold suit symbolizes the prosperity and wealth they can attain through hard work.",
               avatar: "https://i.ibb.co/NxBx2ys/image.png",
             },
             {
-              name:
-                "Seed money for small businesses through the $ on his chest",
+              name: "Seed money for businesses",
               description:
-                "Initial investments into businesses in developing areas helps propel economic growth and provide jobs for people living in that area. This improves standard of living and drives progress.",
+                "Through the $ on his chest, Fund Friend makes initial investments into businessess in developing areas which helps propel economic growth and provide jobs for people living in that area. This improves standard of living and drives progress.",
               avatar: "https://i.ibb.co/Mktqwz6/Exchange.png",
             },
             {
-              name: "Spot gender inequality with his piercing blue eyes",
+              name: "Spot gender inequality",
               description:
-                "Throughout the world, women are not given the same opportunities as men. Fund Friend spots inequality and combats it by providing resources to women who are marginalized.",
+                "Throughout the world, women are not given the same opportunities as men. Fund Friend spots inequality with his piercing blue eyes and combats it by providing resources to women who are marginalized.",
               avatar: "https://i.ibb.co/82ZMddR/image.png",
             },
           ]}
         />
-
-        {/* <Sidekick
-          name="MoneyMan"
-          image="https://images.unsplash.com/photo-1503023345310-bd7c1de61c7d?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80"
-          description="Hello"
-        /> */}
+        <Sidekick
+          name="Unleash"
+          image="https://i.ibb.co/rbhzT0J/image.png"
+          description={
+            <>
+              Unleash helps further the progress on{" "}
+              <strong>
+                Goal #9: Industries, Innovation, and Infrastructure
+              </strong>{" "}
+              as represented by the 9 on his armor.
+            </>
+          }
+          superpowers={[
+            {
+              name: "Harvest Raw Materials",
+              description:
+                "Through Unleash's incredible size, he is able to harvest most of the raw materials a country needs. This allows workers to move from the primary sector into the secondary sector, where they use these raw materials to create finished goods.",
+              avatar: "https://i.ibb.co/rkvZ1L2/image.png",
+            },
+            {
+              name: "Develop Infrastructure",
+              description:
+                "Many countries are unable to develop technologically as they lack the infrastructure to do so. Unleash is able to use his size and strength to quickly develop resilient infrastructure in areas that require it.",
+              avatar: "https://i.ibb.co/jh4Smp9/image.png",
+            },
+            {
+              name: "Harness Energy & Improve Innovation",
+              description:
+                "Electricity surges through Unleash as represented by the blue areas on his armor. This can serve as a sustainable energy supply for developing countries and also can help more people access the Internet.",
+              avatar: "https://i.ibb.co/qgZMXTD/image.png",
+            },
+          ]}
+        />
       </div>
     </div>
   );

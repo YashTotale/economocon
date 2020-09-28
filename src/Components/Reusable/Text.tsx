@@ -1,7 +1,7 @@
 import React from "react";
 
 //Material UI Imports
-import { makeStyles, Typography } from "@material-ui/core";
+import { makeStyles, Typography, TypographyVariant } from "@material-ui/core";
 
 const useStyles = makeStyles((theme) => ({
   text: {
@@ -11,13 +11,14 @@ const useStyles = makeStyles((theme) => ({
 
 interface TextProps {
   className?: string;
+  variant?: TypographyVariant;
 }
 
-const Text: React.FC<TextProps> = ({ children, className }) => {
+const Text: React.FC<TextProps> = ({ children, className, variant = "h6" }) => {
   const classes = useStyles();
 
   return (
-    <Typography variant="h6" className={`${classes.text} ${className}`}>
+    <Typography variant={variant} className={`${classes.text} ${className}`}>
       {children}
     </Typography>
   );

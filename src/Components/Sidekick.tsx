@@ -5,7 +5,7 @@ import Text from "./Reusable/Text";
 
 // Material UI Imports
 import { makeStyles } from "@material-ui/core/styles";
-import { Button, List } from "@material-ui/core";
+import { Button, List, Typography } from "@material-ui/core";
 import {} from "@material-ui/icons";
 import Item from "./Reusable/Item";
 
@@ -25,10 +25,7 @@ const useStyles = makeStyles((theme) => ({
   }),
   heroName: {
     textAlign: "center",
-    margin: "10px",
-    fontSize: "35px",
-    backgroundColor: "black",
-    color: "white",
+    fontWeight: 600,
   },
   image: {
     height: "300px",
@@ -80,12 +77,16 @@ const Sidekick: React.FC<SidekickProps> = ({
       onMouseLeave={() => setHovering(false)}
       className={classes.sidekick}
     >
-      <Heading className={classes.heroName}>{name}</Heading>
+      <Typography className={classes.heroName} variant="h4">
+        {name}
+      </Typography>
       <img className={classes.image} src={image} />
       <Text className={classes.description}>
         <>
           {description}
-          <Text>Superpowers</Text>
+          <Text variant="h5">
+            <strong>Superpowers</strong>
+          </Text>
           <List>
             {superpowers.map(({ name, description, avatar }) => (
               <Item avatar={avatar} subtext={description}>
