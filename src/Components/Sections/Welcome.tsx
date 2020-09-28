@@ -64,24 +64,19 @@ const Welcome: React.FC = () => {
               avatar: "https://i.ibb.co/NxBx2ys/image.png",
             },
             {
-              name: "Seed money for small businesses",
+              name:
+                "Seed money for small businesses through the $ on his chest",
               description:
                 "Initial investments into businesses in developing areas helps propel economic growth and provide jobs for people living in that area. This improves standard of living and drives progress.",
               avatar: "https://i.ibb.co/Mktqwz6/Exchange.png",
             },
+            {
+              name: "Spot gender inequality with his piercing blue eyes",
+              description:
+                "Throughout the world, women are not given the same opportunities as men. Fund Friend spots inequality and combats it by providing resources to women who are marginalized.",
+              avatar: "https://i.ibb.co/82ZMddR/image.png",
+            },
           ]}
-          // description={
-          //   <>
-          //      Fund Friend also provides{" "}
-          //     <em>seed money to small businesses</em> in developing areas,
-          //     symbolized by the $ on his chest. These initial investments help
-          //     fuel economic growth in these areas as well as providing jobs to
-          //     the people living there.
-          //   </>
-          // }
-          // description="Fund Friend's presence provides inspiration to workers. This allows them to work faster
-          //   and boost the economy. His blue eyes can give insight about a countries economy. The green and yellow represents paper money and gold.
-          //   Finally, The 8 on his arms represents the SDG that he fights for."
         />
 
         {/* <Sidekick
