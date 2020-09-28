@@ -2,16 +2,11 @@
 import React from "react";
 import Text from "../Reusable/Text";
 import Heading from "../Reusable/Heading";
+import Item from "../Reusable/Item";
 
 // Material UI Imports
 import { makeStyles } from "@material-ui/core/styles";
-import {
-  List,
-  ListItem,
-  ListItemText,
-  ListItemAvatar,
-  Avatar,
-} from "@material-ui/core";
+import { List } from "@material-ui/core";
 import {} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -48,21 +43,6 @@ const Problems: React.FC<ProblemsProps> = ({}) => {
         </List>
       </Text>
     </div>
-  );
-};
-
-interface ItemProps {
-  avatar: string;
-}
-
-const Item: React.FC<ItemProps> = ({ avatar, children }) => {
-  return (
-    <ListItem>
-      <ListItemAvatar>
-        <Avatar src={avatar} />
-      </ListItemAvatar>
-      <ListItemText primary={children} />
-    </ListItem>
   );
 };
 
