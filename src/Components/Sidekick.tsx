@@ -1,6 +1,5 @@
 // React Imports
-import React, { useState, ReactElement } from "react";
-import Heading from "./Reusable/Heading";
+import React, { useState, ReactElement, Fragment } from "react";
 import Text from "./Reusable/Text";
 
 // Material UI Imports
@@ -43,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-interface Superpower {
+interface Item {
   name: string;
   description: string;
   avatar: string;
@@ -53,7 +52,8 @@ interface SidekickProps {
   name: string;
   description: ReactElement<any, any> | string;
   image: string;
-  superpowers: Superpower[];
+  superpowers: Item[];
+  drawbacks: Item[];
 }
 
 const Sidekick: React.FC<SidekickProps> = ({
@@ -61,6 +61,7 @@ const Sidekick: React.FC<SidekickProps> = ({
   description,
   image,
   superpowers,
+  drawbacks,
 }) => {
   const [hovering, setHovering] = useState<boolean>(false);
   const classes = useStyles({ hovering });
@@ -84,16 +85,20 @@ const Sidekick: React.FC<SidekickProps> = ({
       <Text className={classes.description}>
         <>
           {description}
-          <Text variant="h5">
-            <strong>Superpowers</strong>
-          </Text>
-          <List>
-            {superpowers.map(({ name, description, avatar }) => (
-              <Item avatar={avatar} subtext={description}>
-                {name}
-              </Item>
-            ))}
-          </List>
+          {[superpowers, drawbacks].map((list, i) => (
+            <Fragment key={i}>
+              <Text variant="h5">
+                <strong>{i === 0 ? "Superpowers" : "Drawbacks"}</strong>
+              </Text>
+              <List>
+                {list.map(({ name, description, avatar }) => (
+                  <Item avatar={avatar} subtext={description}>
+                    {name}
+                  </Item>
+                ))}
+              </List>
+            </Fragment>
+          ))}
         </>
       </Text>
       <Button
