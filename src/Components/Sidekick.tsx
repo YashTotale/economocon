@@ -91,8 +91,8 @@ const Sidekick: React.FC<SidekickProps> = ({
                 <strong>{i === 0 ? "Superpowers" : "Drawbacks"}</strong>
               </Text>
               <List>
-                {list.map(({ name, description, avatar }) => (
-                  <Item avatar={avatar} subtext={description}>
+                {list.map(({ name, description, avatar }, i) => (
+                  <Item key={i} avatar={avatar} subtext={description}>
                     {name}
                   </Item>
                 ))}

@@ -27,6 +27,7 @@ interface SidekicksProps {}
 
 const Sidekicks: React.FC<SidekicksProps> = ({}) => {
   const classes = useStyles();
+
   return (
     <div className={classes.sidekicks}>
       <Heading>Sidekicks</Heading>
