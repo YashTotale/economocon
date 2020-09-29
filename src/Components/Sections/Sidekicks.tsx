@@ -97,7 +97,7 @@ const Sidekicks: React.FC<SidekicksProps> = ({}) => {
             {
               name: "Develop Infrastructure",
               description:
-                "Many countries are unable to develop technologically as they lack the infrastructure to do so. Unleash uses his size and strength to quickly develop resilient infrastructure in areas that require it.",
+                "Many countries are unable to develop technologically as they lack the infrastructure to do so. Unleash uses his size and strength to develop resilient infrastructure in areas that require it.",
               avatar: "https://i.ibb.co/jh4Smp9/image.png",
             },
             {
@@ -111,7 +111,7 @@ const Sidekicks: React.FC<SidekicksProps> = ({}) => {
             {
               name: "Stagnation",
               description:
-                "Unleash's enormous size can also be a hindrance as he often needs to take breaks and is slow in completing his tasks.",
+                "Unleash's enormous size can also be a hindrance as he often needs to take breaks and is slow in completing his tasks, causing delays in development.",
               avatar: "https://i.ibb.co/yfNR9cV/image.png",
             },
           ]}

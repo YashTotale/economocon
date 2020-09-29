@@ -46,6 +46,15 @@ const Problems: React.FC<ProblemsProps> = ({}) => {
           </Item>
         </List>
       </Text>
+      <Text>
+        To measure our progress on these issues, we can look at metrics that
+        track the economic health of nations and the world in general. The main
+        metric that does so is the
+        <strong>Gross Domestic Product (GDP)</strong>, the value of the goods
+        and services produced by a country. We can also look at the{" "}
+        <strong>unemployment rate</strong> of countries around the world to get
+        a sense of their economic health.
+      </Text>
     </div>
   );
 };

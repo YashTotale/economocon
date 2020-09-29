@@ -14,7 +14,9 @@ import {
   Paper,
   Typography,
   Fade,
+  Box,
 } from "@material-ui/core";
+import { Rating } from "@material-ui/lab";
 import {} from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
@@ -39,9 +41,35 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     padding: "10px",
+    maxWidth: "80%",
     "&:focus": {
       outline: "none",
     },
+  },
+  modalTitle: {
+    marginBottom: 5,
+  },
+  modalIssue: {
+    marginBottom: 20,
+  },
+  modalText: {
+    margin: "5px 0px",
+  },
+  modalRating: {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+  },
+  modalRatingInfo: {
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    position: "relative",
+  },
+  modalRatingLabel: {
+    position: "absolute",
+    minWidth: 80,
+    left: 150,
   },
 }));
 
@@ -49,10 +77,24 @@ interface NeedHelpProps {}
 
 const NeedHelp: React.FC<NeedHelpProps> = ({}) => {
   const classes = useStyles();
+
+  const ratingLabels: { [index: string]: string } = {
+    0: "Useless",
+    1: "Poor",
+    2: "Fair",
+    3: "Good",
+    4: "Very Good",
+    5: "Excellent",
+  };
+
   const [country, setCountry] = useState<string>();
-  const [open, setOpen] = useState<boolean>(false);
   const [sidekick, setSidekick] = useState<string>();
   const [issue, setIssue] = useState<string>("");
+  const [open, setOpen] = useState<boolean>(false);
+
+  const [rating, setRating] = useState<number | null>(3);
+  const [hoverRating, setHoverRating] = useState<number>(-1);
+
   const countries = Countries.map((c) => ({ label: c, value: c }));
 
   return (
@@ -109,11 +151,35 @@ const NeedHelp: React.FC<NeedHelpProps> = ({}) => {
       >
         <Fade in={open}>
           <Paper className={classes.modalPaper}>
-            <Typography variant="h4">
+            <Typography className={classes.modalTitle} variant="h4">
               Your issue has been received. I am dispatching{" "}
               {sidekick ?? "Fund Friend"} to {country ?? "your location"}.
             </Typography>
-            <Typography variant="h6">Your issue was: "{issue}"</Typography>
+            <Typography className={classes.modalIssue} variant="h6">
+              Your issue was: <em>"{issue}"</em>
+            </Typography>
+            <div className={classes.modalRating}>
+              <Typography className={classes.modalText}>
+                How did {sidekick ?? "Fund Friend"} do?
+              </Typography>
+              <div className={classes.modalRatingInfo}>
+                <Rating
+                  size="large"
+                  defaultValue={0}
+                  value={rating}
+                  onChange={(e, newRating) => setRating(newRating)}
+                  onChangeActive={(e, newHover) => setHoverRating(newHover)}
+                />
+                {rating !== null && (
+                  <Box className={classes.modalRatingLabel} ml={2}>
+                    {ratingLabels[hoverRating !== -1 ? hoverRating : rating]}
+                  </Box>
+                )}
+              </div>
+              <Typography className={classes.modalText} variant="body2">
+                Your rating helps us measure our progress on these goals
+              </Typography>
+            </div>
           </Paper>
         </Fade>
       </Modal>
