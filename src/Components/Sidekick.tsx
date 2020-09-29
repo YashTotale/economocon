@@ -23,6 +23,8 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: "70px",
   }),
   heroName: {
+    fontFamily: "Bangers, cursive",
+    letterSpacing: "2.5px",
     textAlign: "center",
     fontWeight: 600,
   },

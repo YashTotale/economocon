@@ -50,13 +50,13 @@ const Sidekicks: React.FC<SidekicksProps> = ({}) => {
             {
               name: "Motivate Workers",
               description:
-                "Workers are motivated to work faster and more efficiently as Fund Friend's shining green and gold suit symbolizes the prosperity and wealth they can attain through hard work.",
+                "Workers are motivated to work faster and more efficiently as Fund Friend's shining green and gold suit symbolizes the prosperity and wealth they can attain through hard work. This, in turn, boosts the economy.",
               avatar: "https://i.ibb.co/NxBx2ys/image.png",
             },
             {
               name: "Invest in Businesses",
               description:
-                "Through the $ on his chest, Fund Friend makes initial investments into businessess in developing areas which helps propel economic growth in those areas while providing jobs for people living there. This improves the general standard of living and drives progress.",
+                "Through the $ on his chest, Fund Friend makes initial investments into businesses in developing areas which helps propel economic growth while providing jobs in those areas. This improves the standard of living and drives progress.",
               avatar: "https://i.ibb.co/Mktqwz6/Exchange.png",
             },
             {
@@ -101,7 +101,7 @@ const Sidekicks: React.FC<SidekicksProps> = ({}) => {
               avatar: "https://i.ibb.co/jh4Smp9/image.png",
             },
             {
-              name: "Harness Energy & Improve Innovation",
+              name: "Harness Electricity",
               description:
                 "Electricity surges through Unleash as represented by the blue areas on his armor. This can serve as a sustainable energy supply for developing countries and can also help more people access the Internet.",
               avatar: "https://i.ibb.co/qgZMXTD/image.png",
