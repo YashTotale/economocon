@@ -28,9 +28,9 @@ const Welcome: React.FC = () => {
         boost their economies and help them innovate and industrialize.
       </Text>
       <Text>
-        Goals 8 and 9 deal mainly with economic growth and factors that
-        influence it such as infrastructure and innovation. The objective is
-        that, over the next decade, the world will have achieved:
+        Goals 8 and 9 are focused on economic growth and factors that influence
+        it such as infrastructure and innovation. The objective is that, over
+        the next decade, the world will have achieved:
       </Text>
       <List>
         <Item avatar="https://i.ibb.co/hmBDHZM/image.png">

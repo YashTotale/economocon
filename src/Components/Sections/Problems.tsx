@@ -40,6 +40,10 @@ const Problems: React.FC<ProblemsProps> = ({}) => {
             Women earn <strong>12.5% less</strong> than men in 89% of countries
             with data
           </Item>
+          <Item avatar="https://i.ibb.co/MVjS6sp/image.png">
+            <strong>16%</strong> of the world's population does not have access
+            to mobile networks
+          </Item>
         </List>
       </Text>
     </div>
